@@ -5,9 +5,8 @@ metadata:
 spec:
   ports:
   - port: 11211
-#    nodePort: 11201
     targetPort: vpromc-port
     protocol: TCP
   selector:
     app: vpromc 
-  type: NodePort
+  type: ClusterIP

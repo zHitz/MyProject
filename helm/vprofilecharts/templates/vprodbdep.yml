@@ -16,11 +16,17 @@ spec:
     spec:
       containers:
       - name: vprodb
-        image: imranvisualpath/8amysql-db_1:V1
+        image: hitz2403/db:v1
         ports:
         - name: vprodb-port
           containerPort: 3306
-        env:
+        env: 
          - name: MYSQL_ROOT_PASSWORD
-           value: "vprodbpass"
+           valueFrom:
+             secretKeyRef:
+               name: app-secret
+               key: db-pass
+#        env:
+#         - name: MYSQL_ROOT_PASSWORD
+#           value: "vprodbpass"
 
