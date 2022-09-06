@@ -1,1 +1,1 @@
-## infrastructure using Terraform
+## Infrastructure using Terraform
